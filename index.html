@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="未成年懷孕宣導網站，提供正確性知識與求助資源。">
+    <title>未成年懷孕宣導網站</title>
+    <link rel="stylesheet" href="styles.css"> <!-- 外部樣式表 -->
+</head>
+<body>
+    <!-- 網站頭部 -->
+    <header>
+        <h1>未成年懷孕宣導網站</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">首頁</a></li>
+                <li>
+                    <a href="#education">性教育與避孕方法</a>
+                    <span style="cursor: pointer;" onclick="openEducationModal()">&#9660;</span>
+                </li>
+                <li>
+                    <a href="#support">未成年懷孕求助資源</a>
+                    <span style="cursor: pointer;" onclick="openSupportModal()">&#9660;</span>
+                </li>
+                <li><a href="#choose">懷孕後的選擇</a></li>
+                <li><a href="#parent">我的小孩懷孕了</a></li>
+                <li>
+                    <a href="#faq">常見問題解答</a>
+                    <span style="cursor: pointer;" onclick="openModal()">&#9660;</span>
+                </li>
+                <li>
+                    <div style="cursor: pointer; display: inline-flex; align-items: center;" onclick="openAboutModal()">
+                        <a href="#about" style="text-decoration: none; color: white;">關於我們</a>
+                        <span>&#9660;</span>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="educationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeEducationModal()">&times;</span>
+            <h2>性教育與避孕方法</h2>
+            <ul>
+                <li><a href="#education1" onclick="closeEducationModal()">男用保險套</a></li>
+                <li><a href="#education2" onclick="closeEducationModal()">女用保險套</a></li>
+                <li><a href="#education3" onclick="closeEducationModal()">體外射精</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="supportModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSupportModal()">&times;</span>
+            <h2>未成年懷孕求助資源</h2>
+            <ul>
+                <li><a href="#support1" onclick="closeSupportModal()">未成年懷孕求助網站</a></li>
+                <li><a href="#support2" onclick="closeSupportModal()">學校師長</a></li>
+                <li><a href="#support3" onclick="closeSupportModal()">告知父母</a></li>
+                <li><a href="#support4" onclick="closeSupportModal()">各縣市社會局</a></li>
+            </ul>
+        </div>
+    </div>
+
+   <!-- 模態窗口 -->
+    <div id="faqModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>常見問題解答</h2>
+            <ul>
+                <li><a href="#faq-safe-period" onclick="closeModal()">安全期怎麼計算？</a></li>
+                <li><a href="#faq-legal" onclick="closeModal()">未成年性行為的法律問題</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 關於我們模態窗口 -->
+<div id="aboutModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeAboutModal()">&times;</span>
+        <h2>關於我們</h2>
+        <p>這個網站是由真理大學人文與資訊學系學生製作，作為我們大學四年級的專題計畫。我們整理了網路上有關未成年懷孕的相關資料，目標是提供青少年及其家長有關未成年懷孕的知識、預防方法和求助資源。透過此網站，我們希望提升性教育和避孕知識，並為有需要的青少年提供可行的支援途徑。</p>
+        <ul>
+            <li>網站作者：陳家媛、邱詩媛</li>
+            <li>指導教授：劉亞蘭 教授</li>
+            <li>參考來源：</li>
+            <p><a href="https://www.durex-store.com.tw/Article/Detail/89086" target="_blank">保險套闊度怎麼量？保險套長度怎麼看？5秒教你秒懂保險套正確闊度量法及尺寸該怎麼選！</a></p>
+            <p><a href="https://www.durex-store.com.tw/Article/Detail/66750?srsltid=AfmBOooYMFukov_5EIIRvUCm8xhgOIuNtaR5aSjRZte4QeE2MZ3MBX7a" target="_blank">保險套怎麼戴才正確？謹記7字口決：看、撕、擠、扭、套、取、丟！</a></p>
+            <p><a href="https://www.durex-store.com.tw/Article/Detail/81683" target="_blank">戴保險套還是懷孕？明年不想當爸媽必看！保險套避孕注意5大事項和4個錯誤避孕失敗戴法</a></p>
+            <p><a href="https://helloyishi.com.tw/sexual-health/safe-sex/facts-about-female-condoms/" target="_blank">女孩當自強！妳不可不知的女用保險套大小事</a></p>
+            <p><a href="https://pansci.asia/archives/189114" target="_blank">上床戴套不只是男生的專利：認識「女用保險套」</a></p>
+            <p><a href="https://www.famplan.org.hk/zh/health-info/contraceptive-methods/female-condom" target="_blank">香港家庭計畫指導會-女用避孕套</a></p>
+            <p><a href="https://health.businessweekly.com.tw/article/ARTL003010839" target="_blank">保險套尺寸、闊度怎麼量？女用保險套怎麼用、避孕效果好嗎？保險套常見問題一次瞭解</a></p>
+            <p><a href="https://b303094004.pixnet.net/blog/post/345569092" target="_blank">保險套怎麼選？有訣竅</a></p>
+            <p><a href="https://blog.tianyiai.tw/menstrual/6-types-of-contraception/" target="_blank">2024最詳細10種避孕方法比較：費用、優缺點、避孕機率…男女同時避孕最安全！</a></p>
+            <p><a href="https://257085.sfaa.gov.tw/" target="_blank">未成年懷孕求助網站</a></p>
+            <P><a href="https://edu.law.moe.gov.tw/LawContent.aspx?id=FL036539" target="_blank">學生懷孕受教權維護及輔導協助要點</a></p>
+            <P><a href="https://edu.law.moe.gov.tw/Download.ashx?FileID=225375&id=FL036539&type=LAW" target="_blank">學生懷孕受教權維護及輔導協助要點附件一、附件二</a></p>
+            <P><a href="https://blog.tianyiai.tw/pre-spontaneous-abortion/how-to-tell-your-parents-youre-pregnant/" target="_blank">學生懷孕怎麼辦？未成年懷孕怎麼跟家人說？3個跟父母開口的小技巧</a></p>
+            <P><a href="https://www.sfaa.gov.tw/SFAA/Pages/ashx/File.ashx?FilePath=~/File/Attach/9550/File_191522.pdf" target="_blank">衛服部社會及家庭署-未滿20歲懷孕服務及後續追蹤輔導服務方案</a></P>
+            <P><a href="https://dosw.gov.taipei/News_Content.aspx?n=37B7BAFDE8D07419&s=0FB2F93123F7664E" target="_blank">台北市政府社會局-未滿20歲懷孕防治及輔導服務</a></P>
+            <P><a href="https://www-ws.gov.taipei/Download.ashx?u=LzAwMS9VcGxvYWQvNTE1L3JlbGZpbGUvNTYzMTkvODM3NTkxMC9mZWMxMmJjZC0wMGZkLTRkNzUtOTYwZS00MGE4ZDU4YzI3NmEucGRm&n=U0RN6LyU5Yqp6KGoLeacquaIkOW5tOaHt%2BWtle%2B8iOippueglOeZvO%2B8iS5wZGY%3D&icon=.pdf" target="_blank">台北市政府全球資訊網-青少女未成年懷孕的多元選擇與資源管道</a></P>
+            <P><a href="https://dpt.cch.org.tw/upload/site_item/9011/4855/SDM0037%E6%9C%AA%E6%88%90%E5%B9%B4%E9%9D%92%E5%B0%91%E5%A5%B3%E7%99%BC%E7%8F%BE%E8%87%AA%E5%B7%B1%E6%87%B7%E5%AD%95%E6%99%82%EF%BC%8C%E7%9F%A5%E9%81%93%E5%8F%AF%E4%BB%A5%E6%9C%89%E5%93%AA%E4%BA%9B%E9%81%B8%E6%93%87%E5%97%8E.pdf" target="_blank">彰化基督教醫院-未成年青少女發現自己懷孕時，知道可以有哪些選擇嗎？</a></P>
+            <P><a href="https://health99.hpa.gov.tw/article/18278" target="_blank">衛服部健康署-未成年的女兒懷孕了該怎麼辦?</a></P>
+            <P><a href="https://www.womenshealthmag.com/tw/healthhealth/womenhealth/a46850443/safe-days-calendar/" target="_blank">安全期怎麼算？超簡單「安全期計算公式」快速算出危險期、安全期</a></P>
+            <P><a href="https://blog.tianyiai.tw/pre-spontaneous-abortion/sex-between-teenages/" target="_blank">16歲可以性行為嗎？未成年懷孕、性行為法律問題懶人包：未滿16歲/18歲/20歲懷孕怎麼辦？</a></P>
+            <LI>影片：</LI>
+            <P><a href="https://youtu.be/Cw9ycfWEiB4?si=lG6ljIWNfMq57jzL" target="_blank">全國未成年懷孕諮詢專線及求助網站</a></P>
+            <p><a href="https://www.youtube.com/watch?v=ASmulxGLhTY" target="_blank">今晚你戴套了嗎？ 美女博士教你正確戴保險套 絕對不下流</a></p>
+            <p><a href="https://www.youtube.com/watch?v=4DBO4crmeMA" target="_blank">避孕套居然還有女用的？女性避孕套使用教學</a></p>
+            <P><a href="https://youtu.be/W-byslOWo_4?si=HA40enZRLAsbfUul" target="_blank">女兒17歲懷孕生子，小涵媽媽：她是小媽媽 也是我女兒｜親子天下</a></P>
+        </ul>
+    </div>
+</div>
+
+    <!-- 首頁區域 -->
+    <section id="home">
+        <h2>歡迎來到未成年懷孕宣導網站</h2>
+        <p>隨網際網路的發達與社會風氣開放等等的影響下，青少年們對性的了解與好奇更加強烈，發生行行為的年齡下降，發生未成年非預期懷孕事件也層出不窮，因此教導性教育或對於兩性議題的討論已無可避免，學習正確的性觀念及知識，才能真正的保護自己與他人。</p>
+        <p>發生未成年懷孕的少男少女們不要因為害怕而不敢求助，勇敢的面對並解決問題，有很多的專業人士及社工能夠提供幫助！</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Cw9ycfWEiB4?si=xkJfq1daJeXM1WcG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+
+    <!-- 性教育與避孕方法區域 -->
+    <section id="education">
+        <h2>性教育與避孕方法</h2>
+        <article>
+            <p>了解如何保護自己和他人，下列為適合未成年的避孕方法：</p>
+            <ul>
+                <li><h3 id="education1">男用保險套</h3></li>
+                <p>戴保險套有82%至98%以上避孕效果，可直接阻隔精液有效避孕，也可以用來防止性病或其他傳染疾病。</p>
+                <p>但只適用於男性，對女性無積極保護作用，仍需承擔可能懷孕的風險。</p>
+                <img src="img/tt.png" alt="保險套注意事項" width="900" height="600">
+                <p>使用保險套仍有懷孕的機率，而導致避孕失敗有可能有下列4個原因：</p>
+                <p><b>1.未全程使用保險套</b></p>
+                <p>保險套應於性行為一開始即使用，因男性在射精前的分泌物，可能含少量精子，另外過早取下保險套，也有可能有精液流出，增加懷孕風險。</p>
+                <p><b>2.保險套破裂</b></p>
+                <P>保險套於過程中可能因摩擦或碰觸到尖銳物體而破裂。</P>
+                <p><b>3.保險套脫落</b></p>
+                <p>若未正確穿戴、未完全展開保險套或是選擇到錯誤的尺寸，都有可能於行為中脫落。</p>
+                <p>購買保險套前，應先測量自己的闊度與長度，通常保險套的外盒都會標註該保險套的尺寸(闊度)，標註方式為52.5mm±2mm、56mm±2mm等，而長度約落在17-20cm。</p>
+                <img src="img/size.png" alt="測量尺寸方法" width="900" height="600">(文取自杜雷斯官網/圖取自微笑藥師網)
+                <p>若想了解更多如何選擇保險套尺寸方法可參考此網址：</p>
+                <p><a href="https://www.durex-store.com.tw/Article/Detail/89086" target="_blank">保險套闊度怎麼量？保險套長度怎麼看？5秒教你秒懂保險套正確闊度量法及尺寸該怎麼選！</a></p>
+                <p><b>4.使用方式錯誤</b></p>
+                <P>保險套正確使用方法，應按照下圖步驟</P>
+                <img src="img/1.jpg" alt="保險套使用步驟" width="900" height="600">(取自杜雷斯官網)
+                <p>詳細的保險套使用方式可參考下列影片和網站：</p>
+                <p><a href="https://www.youtube.com/watch?v=ASmulxGLhTY" target="_blank">今晚你戴套了嗎？ 美女博士教你正確戴保險套 絕對不下流</a></p>
+                <p><a href="https://www.durex-store.com.tw/Article/Detail/66750?srsltid=AfmBOooYMFukov_5EIIRvUCm8xhgOIuNtaR5aSjRZte4QeE2MZ3MBX7a" target="_blank">保險套怎麼戴才正確？謹記7字口決：看、撕、擠、扭、套、取、丟！</a></p>
+                <p>完整的保險套說明可參考下列網址：</p>
+                <p><a href="https://www.durex-store.com.tw/Article/Detail/81683" target="_blank">戴保險套還是懷孕？明年不想當爸媽必看！保險套避孕注意5大事項和4個錯誤避孕失敗戴法</a></p>
+                <li><h3 id="education2">女用保險套</h3></li>
+                <p>其實現在市面上除了大眾一般所熟知的男生使用的保險套外，還有另一種「女用保險套」。相較於男用保險套有種尺寸可選擇，女用保險套為單一尺寸，因女性保險套使用方式較男性保險套要來的複雜，衛教不易，加上有些人可能覺得使用起來不美觀、不舒服或者沒有安全感等種種因素，使得女性保險套使用的人較少，推廣不易。</p>
+                <p>女性保險套的功用和男性保險套的功用差不多，能用於避孕及防止性病傳染，其主要獨特之處為<b>女性能在性交前主動進行安全措施，不須依賴伴侶</b>。若伴侶不願使用保險套，女性也能主動的保護自己。而在正確使用的情況下，避孕成功率可達85%～95%。</p>
+                <p>下圖簡單整理出男性保險套和女性保險套的差別，雖現今相較女性保險套大多人仍選擇使用男性保險套，但預防懷孕、防止性傳染病不分男女，雙方都應積極保護自己。</p>
+                <img src="img/vs.png" alt="男女保險套比較" width="900" height="600">(圖取自PIXTA圖庫)
+                <p>而女性保險套的使用方式可參考下圖，使用前須先檢查外包裝的使用期限及保險套是否有破損等狀況。另外每進行一次性行為就需更換新的保險套，且<b>男女保險套不可同時使用</b>，避免摩擦時保險套破裂，失去避孕效果。</p>
+                <img src="img/girl.png" alt="女性保險套使用方式" width="900" height="600">(圖文取自香港家庭計畫指導會)
+                <p>詳細女性保險套解說與示範教學可觀看下列影片：</p>
+                <p><a href="https://www.youtube.com/watch?v=4DBO4crmeMA" target="_blank">避孕套居然還有女用的？女性避孕套使用教學</a></p>
+                <li><h3 id="education3">體外射精</h3></li>
+                <P>此方法感覺是最安全也最方便的方式，但其實在性高潮時需要男性拔出後射精還是會有失敗的風險。</P>
+                <p>因為在射精之前，男性處於興奮狀態下，前列腺也會分泌一種稱為“前列腺液”的液體，裡面可能含有少量精子。</p>
+                <p>因此這個避孕方法還是存在著懷孕的可能性。</p>
+            </ul>
+            <p>若需更詳細、更完整的避孕方式，可參考下列網址：</p>
+            <p><a href="https://blog.tianyiai.tw/menstrual/6-types-of-contraception/" target="_blank">2024最詳細10種避孕方法比較：費用、優缺點、避孕機率…男女同時避孕最安全！</a></p>
+        </article>
+    </section>
+
+    <!-- 懷孕求助資源區域 -->
+    <section id="support">
+        <h2>未成年懷孕求助資源</h2>
+        <p>以下是可以提供支援的機構，如果你或你身邊的朋友遇到了未成年懷孕問題，請不要猶豫尋求幫助。且若在懷孕的狀況下仍選擇拖延面對，那麼隨著胎兒週數的成長，所能夠做的決定也會越少，因此，為自己的行為負起責任、勇於面對，相信這才是最能解決困難的方式！</p>
+        <ul>
+            <li><h3 id="support1"><a href="https://257085.sfaa.gov.tw/" target="_blank">未成年懷孕求助網站</a></h3></li>
+            <p>此網站除了提供下列幾點服務以外，也有針對兩性之間的交往、性別教育等進行討論，主要是引導青少年建立正確、健康之性觀念與性知識，即時協助解決困惑並渡過難關。</p>
+            <p>在下列的服務中，幾乎都能匿名留言，因此不需因為害怕而不敢提問。</p>
+            <p><b>1.電話諮詢服務：</b>服務時間為週一到週五0900-1800撥打免付費全國未成年懷孕諮詢專線 0800-25-7085（愛我，請妳幫我），將有專人為您服務。</p>
+            <p><b>2.轉介服務：</b>當當事人所遇到的問題需要所在地社會局予以協助時，本專線工作人員會透過電話徵得同意後，協助轉知當地社會局，使其可以獲得更適切的服務。</p>
+            <p><b>3.線上即時諮詢：</b>服務時間為週一週五1330-1800，可直接至未成年懷求助網站的線上即時通訊，將由專人為您服務。</p>
+            <p><b>4.網路留言諮詢：</b>至未成年懷孕求助網站的「留言社群」或「聯絡我們」進行留言，求助站工作人員將於三個工作天內予以回覆。</p>
+            <li><h3 id="support2">學校師長</h3></li>
+            <p>教育部為落實性別平等教育法，制定了學生懷孕受教權維護及輔導協助要點，即使是懷孕的學生也須保障其受教權，學校須提供校內外可用資源，且有相關處理流程(如下圖)。</p>
+            <img src="img/school.jpg" alt="學生懷孕受教權" width="700" height="1000">(取自學生懷孕受教權維護及輔導協助要點的學生懷孕受教權維護及輔導協助流程圖)
+            <p><b>適用對象：</b>公私立各級學校及學生，包括
+            <p>1.懷孕、曾懷孕（人工流產、自然流產或出養）之學生
+            <p>2.育有子女之學生</p>
+            <p>3.因配偶或伴侶懷孕、曾懷孕，而有受教權維護及輔導協助需求之學生</p>
+            <p><b>受教權益：</b>
+            <p>1.彈性辦理請假</p>
+            <p>2.彈性處理成績考核</p>
+            <p>3.保留入學資格</p>
+            <p>4.延長修業期限</p>
+            <p>5.申請休學期間不計入休學年限</p>
+            <p>6.其他受教權益</p>
+            <p>適用的學生可向學校提出學生懷孕現況與需求(附件一)，未成年懷孕及未成年育有子女之學生可提出個案服務轉介之申請(附件二)，或運用其他相關社會福利資源。調查表及轉介單可參考附件<a href="https://edu.law.moe.gov.tw/Download.ashx?FileID=225375&id=FL036539&type=LAW" target="_blank">學生懷孕受教權維護及輔導協助要點附件一、附件二</a></p>
+            <p><b>學校應依下列方式辦理：</b>
+            <p>1.於相關課程、教育活動、集會或研習，每學年應辦理至少一場維護學生懷孕受教權及情感教育相關議題之宣導、訓練</p>
+            <p>2.學校不得以學生懷孕、曾懷孕或育有子女為由，以明示或暗示之方式，要求適用學生請假、休學、轉學或退學</p>
+            <p>3.學校應修正學則、各種章則、成績考核或評量之相關規定，納入彈性辦理請假、彈性處理成績考核、保留入學資格、延長修業期限、申請休學期間不計入休學年限之輔導協助措施，協助適用學生完成學業。但法規另有規定者，不在此限。</p>
+            <p>4.學校應改善校園相關設施，提供適用學生友善安全之學習環境</p>
+            <p>5.學校不得歧視或違法懲處適用學生，亦不得做出其他不當之措施或決議</p>
+            <p>了解更多相關資源，行使自身權益，保障未來：<a href="https://edu.law.moe.gov.tw/LawContent.aspx?id=FL036539" target="_blank">學生懷孕受教權維護及輔導協助要點</a></p>
+            <li><h3 id="support3">告知父母</h3></li>
+            <P>根據法律規定未滿18歲未經法定代理人同意無法進行醫療處置，因此無論是選擇要把孩子生下來或是人工流產，都須法定代理人簽名，所以無論如何，未成年懷孕都一定要告訴父母才行。</P>
+            <p>或許年輕的你會擔心家人的責罵或是其他較劇烈的反應而不敢向家人開口，但是往往家人的這些情緒反應都是來自對孩子的愛與關心，正是因為不捨你們要在如此輕的年紀就要面臨如此煎熬、辛苦的過程，所以才會特別難以接受，</p>
+            <p>但只要雙方能夠有充分的溝通，最終家人往往會是當事人最大的力量與支持，尤其無論是終止懷孕或是生產，後續要面臨的經濟、生心理壓力都是非常龐大，家人將會在這個過程裡面給予很多的協助。</p>
+            <p>下圖根據天一愛<a href="https://blog.tianyiai.tw/pre-spontaneous-abortion/how-to-tell-your-parents-youre-pregnant/" target="_blank">學生懷孕怎麼辦？未成年懷孕怎麼跟家人說？3個跟父母開口的小技巧</a>文章整理出跟父母開口的小技巧</p>
+            <img src="img/talk.jpg" alt="溝通技巧" width="900" height="600">
+            <li><h3 id="support4">各縣市社會局</h3></li>
+            <p>若對於目前的狀況感到很無助，向地方社會局求助，會有專業的社工人員陪同一起面對與家人溝通的過程以及後續更進一步的規劃，服務內容包含：</p>
+            <p>1.諮詢輔導：提供面談、電話、醫療、法律等諮詢服務</p>
+            <p>2.經濟扶助：包括低收入戶扶助、中低收入育兒補助、托育補助、弱勢家庭兒童及少年緊急生活扶助等</p>
+            <p>3.安置照顧：包括短期中途之家待產安置、嬰兒之出養及寄養、單親家庭中長期安置服務等</p>
+            <p>4.支持性輔導服務：包括單親家庭支持性服務、個案返校輔導、學籍取得、特殊個案就業轉介服務</p>
+            <p>地方政府未滿20歲少女懷孕服務流程圖如下</p>
+            <img src="img/local.jpg" alt="社會局處理流程圖" width="700" height="1000">(取自衛服部社會及家庭署<a href="https://www.sfaa.gov.tw/SFAA/Pages/ashx/File.ashx?FilePath=~/File/Attach/9550/File_191522.pdf" target="_blank">未滿20歲懷孕服務及後續追蹤輔導服務方案</a>)
+        </ul>
+    </section>
+
+    <section id="choose">
+        <h2>懷孕後的選擇</h2>
+        <p>得知自己懷孕後，對於未來一系列的選擇感到迷茫，這都是正常的，我們可以和父母或者法定代理人一起尋找專業人士的協助，一同思考可能面臨的問題並商量對策，做出最適合自己的決定。</p>
+        <h3><li>終止懷孕</li></h3>
+        <p>懷孕週數是從最後一次月經期之第一天開始算起，若懷孕，則月經過期不來，其懷孕週數已進入第5週。因此是否終止懷孕的考量也是從懷孕第5週開始。</p>
+        <img src="img/way.jpg" alt="終止懷孕方式說明" width="800" height="980">
+        <h3><li>自己扶養</li></h3>
+        <p>想把孩子生下來自己扶養小孩的話，可以思考下列問題：</p>
+        <li>1.家人是否能夠協助負擔共同扶養？</li>
+        <li>2.是否考慮與男方結婚共同扶養？</li>
+        <li>3.若決定做單親媽媽，則須考量經濟上的問題，有些什麼扶助資源？未來學業或工作如何平衡？</li>
+        <li>4.若選擇寄養，將來可於合宜時機帶回自己養。請社福提供相關資訊，尋找寄養家庭。</li>
+        <p>若計畫生下小孩，得到父母、監護人或伴侶的支持是很重要的。若伴侶、先生或家人有不同意見，你們需協商找出共識，但也不需違背心意做出被迫的決定。懷孕過程中若需要協助或安置於中途之家，也可透過社會福利管道或諮詢服務尋求協助。</p>
+        <h3><li>出養</li></h3>
+        <p>當兒童的原生父母或家庭發生困難，使他無法和父母共同生活，因此需透過社會福利機構安排，替孩子另找一個家庭，提供他更有保障的養育方式。</p>
+        <h3><li>寄養</li></h3>
+        <p>當兒童的原生家庭暫時無法提供適當照顧，必須安排一個替代性的家庭來對此兒童提供計畫性的照顧，將來可於合宜時機帶回自己養。</p>
+        <h3><li>終止懷孕與生下孩子的比較</li></h3>
+        <img src="img/baby.jpg" alt="終止懷孕與生下孩子的比較" width="800" height="500">
+        <p>(上述內文及表格皆參考自<a href="https://www-ws.gov.taipei/Download.ashx?u=LzAwMS9VcGxvYWQvNTE1L3JlbGZpbGUvNTYzMTkvODM3NTkxMC9mZWMxMmJjZC0wMGZkLTRkNzUtOTYwZS00MGE4ZDU4YzI3NmEucGRm&n=U0RN6LyU5Yqp6KGoLeacquaIkOW5tOaHt%2BWtle%2B8iOippueglOeZvO%2B8iS5wZGY%3D&icon=.pdf" target="_blank">台北市政府全球資訊網-青少女未成年懷孕的多元選擇與資源管道</a>及<a href="https://dpt.cch.org.tw/upload/site_item/9011/4855/SDM0037%E6%9C%AA%E6%88%90%E5%B9%B4%E9%9D%92%E5%B0%91%E5%A5%B3%E7%99%BC%E7%8F%BE%E8%87%AA%E5%B7%B1%E6%87%B7%E5%AD%95%E6%99%82%EF%BC%8C%E7%9F%A5%E9%81%93%E5%8F%AF%E4%BB%A5%E6%9C%89%E5%93%AA%E4%BA%9B%E9%81%B8%E6%93%87%E5%97%8E.pdf" target="_blank">彰化基督教醫院-未成年青少女發現自己懷孕時，知道可以
+            有哪些選擇嗎？</a>，內有更多幫助做選擇的步驟、表格及量表，期望能提供猶豫的你一些方向。)</p>
+    </section>
+
+    <section id="parent">
+        <h2>我的小孩懷孕了</h2>
+        <p>當家長們聽到自己的小孩發生未成年非預期懷孕，慌亂、氣憤、不捨、無奈等情緒接踵而來，然而其中的「憤怒」是小孩們最害怕的情緒之一，他們對告知家長有種深深的畏懼感，因此多數的小孩選擇隱瞞，而用錯誤的方法解決造成身體或者心理的傷害。</p>
+        <p>但是「憤努」這情緒可能代表著「自責式的罪惡感」，認為自己沒有把孩子照顧好、教導好，這些種種複雜的情緒是很難避免的，但是我們仍須讓孩子知道父母仍是他們最堅強的後盾，會協助他們一起面對這人生課題。</p>
+        <p>然而這人生課題我們僅能陪伴，無法代替他們完成，我們和孩子一起討論、傾聽他們的想法，幫助他們從這課題中成長。</p>
+        <P>未成年非預期懷孕會面臨一連串的選擇，當中可能有醫療、法律、未來生涯規劃等，我們能夠尋求專業社工的幫助，協調小孩與家長間的溝通並釐清對未來的想法。</P>
+        <p>無論最終的選擇是什麼，都會有人陪伴在他們身邊。</p>
+        <p>參考自衛服部國民健康署-<a href="https://health99.hpa.gov.tw/article/18278" target="_blank">未成年的女兒懷孕了該怎麼辦?</a></p>
+        <P>案例分享：<a href="https://youtu.be/W-byslOWo_4?si=HA40enZRLAsbfUul" target="_blank">女兒17歲懷孕生子，小涵媽媽：她是小媽媽 也是我女兒｜親子天下</a></P>
+    </section>
+
+    <!-- 常見問題解答區域 -->
+    <section id="faq">
+        <h2>常見問題解答</h2>
+        <h3 id="faq-safe-period">Q：安全期怎麼計算？</h3>
+        <p>安全期並不是百分百不會懷孕，只是相對危險期來說懷孕機率較低，但仍有可能懷孕。</p>
+        <p>而月經週期隨生理狀況或生活作息不同會有所變化，具有一定的不確定性，尤其未成年少女，月經週期更是不穩定。</p>
+        <P>若不想發生未成年非預期懷孕事件，即使於安全期也應做其他避孕措施，保護彼此。</P>
+        <b>安全期計算方法：</b>
+        <p><b>1.計算平均月經週期</b></p>
+        <p>月經第一天到下次月經來的前一天為止，通常為28-30天。（建議紀錄3個月以上的月經週期，估算出平均月經週期天數）</p>
+        <p><b>2.推算出排卵日</b></p>
+        <P>「排卵日」為下次月經週期開始的前14天。</P>
+        <P>舉例來說，若下次月經會在12/31來，則排卵日為12/31往前算14天，即12/17。</P>
+        <p><b>3.找出排卵期(危險期)</b></p>
+        <P>排卵期為排卵日前5天+排卵日1天+排卵日後4天。</P>
+        <p><b>4.排除經期與排卵期，即為安全期</b></p>
+        <img src="img/safe.png" alt="安全期計算方式" width="600" height="600">
+        <p><b>注意：於安全期發生性行為仍有懷孕機率，尤其未成年的月經週期還非常不穩定，請於發生性行為之前再三考慮。</b></p>
+        <p><b>若真的要進行性行為，也請做其他避孕措施。</b></p>
+        <h3>懷孕後我該怎麼辦？</h3>
+        <p>首先，不要慌張，請盡快與可信賴的成年人或專業人員交談，他們會幫助你了解下一步該做什麼。</p>
+        <h3 id="faq-legal">Q：未成年性行為法律問題</h3>
+        <p>法律規定16歲以上的人擁有性自主權，可自行決定是否與他人發生性行為，只要雙方是自願的且年滿16歲就不觸法。</p>
+        <p>下圖為性行為法律責任一覽表</p>
+        <img src="img/law.jpg" alt="性行為法律責任一覽表" width="800" height="950">(參考自天一愛文章)
+        <p>以下再補充幾點</p>
+        <li>刑法依年齡區分為：未滿14歲(無責任能力人)不罰、滿14未滿18歲及80歲以上(限制責任能力人)犯罪可減輕刑責、18歲以上(完全責任能力人)犯罪須負完全責任</li>
+        <li>告訴乃論：指須經由受害人或有權提出告訴的人提出告訴，檢察官才能起訴</li>
+        <li>非告訴乃論：指即使被告不想追究，檢察官也可以起訴、法院可以審判</li>
+        <li>兩小無猜條款：未滿18歲之人對未滿16歲之男女性交或猥褻者，可減輕或免除其刑，且屬於告訴乃論罪</li>
+    </section>
+
+    <!-- 網站底部 -->
+    <footer>
+        <p>&copy; 2024 未成年懷孕宣導網站. 版權所有。</p>
+    </footer>
+
+    <script>
+    // 打開性教育與避孕方法的模態窗口
+    function openEducationModal() {
+        document.getElementById("educationModal").style.display = "block";
+    }
+
+    // 關閉性教育與避孕方法的模態窗口
+    function closeEducationModal() {
+        document.getElementById("educationModal").style.display = "none";
+    }
+
+    // 打開支援資源的模態窗口
+    function openSupportModal() {
+        document.getElementById("supportModal").style.display = "block";
+    }
+
+    // 關閉支援資源的模態窗口
+    function closeSupportModal() {
+        document.getElementById("supportModal").style.display = "none";
+    }
+
+    // 打開常見問題的模態窗口
+    function openModal() {
+        document.getElementById("faqModal").style.display = "block";
+    }
+
+    // 關閉常見問題的模態窗口
+    function closeModal() {
+        document.getElementById("faqModal").style.display = "none";
+    }
+
+    // 點擊窗口外部時關閉模態窗口
+    window.onclick = function(event) {
+        if (event.target == document.getElementById("educationModal")) {
+            closeEducationModal();
+        }
+        if (event.target == document.getElementById("supportModal")) {
+            closeSupportModal();
+        }
+        if (event.target == document.getElementById("faqModal")) {
+            closeModal();
+        }
+    }
+    </script>
+
+<script>
+    // 打開關於我們的模態窗口
+    function openAboutModal() {
+        document.getElementById("aboutModal").style.display = "block";
+    }
+
+    // 關閉關於我們的模態窗口
+    function closeAboutModal() {
+        document.getElementById("aboutModal").style.display = "none";
+    }
+
+    // 點擊窗口外部時關閉模態窗口
+    window.onclick = function(event) {
+        if (event.target == document.getElementById("aboutModal")) {
+            closeAboutModal();
+        }
+        if (event.target == document.getElementById("educationModal")) {
+            closeEducationModal();
+        }
+        if (event.target == document.getElementById("supportModal")) {
+            closeSupportModal();
+        }
+        if (event.target == document.getElementById("faqModal")) {
+            closeModal();
+        }
+    }
+</script>
+
+</body>
+</html>
